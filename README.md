@@ -1,9 +1,9 @@
 # DML-SubglacialHydrology
 
-This repository contains python code that simulates an ensemble of subglacial bed elevation grids using sequential Gaussian simulation. 
-Some of the geostatistical simulation tools are modified from/based on the [GStatSim](https://github.com/GatorGlaciology/GStatSim) python package. 
-Subglacial meltwater drainage associated with each simulated grids is predicted using flow routing tools from the [TopoToolbox](https://se.mathworks.com/matlabcentral/fileexchange/50124-topotoolbox) in Matlab.
-<br> The analysis is run in the Dronning Maud Land region, Antarctica, but can be adapted to run elsewhere.
+This repository contains functions and workflows that simulates an ensemble of subglacial bed elevation grids using sequential Gaussian simulation and predicts the routing of subglacial water for each simulated elevation grid in the ensemble. 
+The simulation step is formatted to run as many single tasks in a HPC environment, configured in a job submit script. 
+Some of the geostatistical simulation tools are modified from or based on the [GStatSim](https://github.com/GatorGlaciology/GStatSim) python package and subglacial meltwater drainage associated with each simulated grids is predicted using flow routing tools from the [TopoToolbox](https://se.mathworks.com/matlabcentral/fileexchange/50124-topotoolbox) in Matlab.
+The analysis is set up to run in the Dronning Maud Land region, Antarctica.
 
 Results are discussed in the following publication:<br>
 "Evidence of active subglacial lakes under a slowly moving coastal region of the Antarctic Ice Sheet" <br>

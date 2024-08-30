@@ -100,7 +100,7 @@ def hydrology(indir,bed,h_ice,isurf,spatial_ref=None,tmp_mask=False):
 # Run matlab water routing tools in python using matlab engine
 #------------------------------------------------------------------------------
     eng= matlab.engine.start_matlab()
-    eng.addpath('C:/Users/calvin.shackleton/Dropbox/Scripts/Matlab/Subglacial_hydrology_DML')
+    eng.addpath('C:/Users/calvin.shackleton/Dropbox/Scripts/Matlab/water_routing_DML')
     eng.Subglacial_hydrology_DML(indir,nargout=0) # run matlab script
     eng.quit()
     

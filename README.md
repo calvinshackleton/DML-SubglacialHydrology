@@ -1,9 +1,9 @@
 # DML-SubglacialHydrology
 
-This repository contains functions and workflows that simulates an ensemble of subglacial bed elevation grids using sequential Gaussian simulation and predicts the routing of subglacial water for each simulated elevation grid in the ensemble. 
+This repository contains functions and workflows that simulates an ensemble of subglacial bed elevation grids using sequential Gaussian simulation, then predicts the routing of subglacial water for each simulated elevation grid in the ensemble. The analysis is set up to run in Dronning Maud Land, Antarctica.
 The simulation step is formatted to run as many single tasks in a HPC environment, configured in a job submit script. 
-Some of the geostatistical simulation tools are modified from or based on the [GStatSim](https://github.com/GatorGlaciology/GStatSim) python package and subglacial meltwater drainage associated with each simulated grids is predicted using flow routing tools from the [TopoToolbox](https://se.mathworks.com/matlabcentral/fileexchange/50124-topotoolbox) in Matlab.
-The analysis is set up to run in the Dronning Maud Land region, Antarctica.
+Some of the geostatistical simulation tools are modified from or based on the [GStatSim](https://github.com/GatorGlaciology/GStatSim) python package, and subglacial meltwater drainage is predicted using flow routing tools from the [TopoToolbox](https://se.mathworks.com/matlabcentral/fileexchange/50124-topotoolbox) in Matlab.
+
 
 Results are discussed in the following publication:<br>
 "Evidence of active subglacial lakes under a slowly moving coastal region of the Antarctic Ice Sheet" <br>
@@ -16,7 +16,7 @@ https://doi.org/10.21334/npolar.2024.b438191c
 
 ## Usage
 
-The workflow for this analysis follows this general structure:
+The analysis can be repeated by following this workflow:
 
 1. Use [exp_variogram_DML.py](/exp_variogram_DML.py) to pre-process XYZ data and interactively calculate then model experimental variograms
 2. Run [SGSim_HPC_single.py](/SGSim_HPC_single.py) to simulate bed elevation grids based on measurements and modelled variograms
@@ -25,5 +25,5 @@ The workflow for this analysis follows this general structure:
 4. Run [ensemble_analysis_DML.py](/subglacial_drainage_DML.py) to output ensemble statistics and stream probability maps
 
 ## Contact
-Feel free to contact Calvin Shackleton (calvin.shackleton@npolar.no) for questions relating to the simulated bed elevations and water routing analysis.
+Contact Calvin Shackleton (calvin.shackleton@npolar.no) for questions relating to the simulated bed elevations and water routing analysis.
 For other questions related to the publication, please contact Jennifer Arthur (jennifer.arthur@npolar.no)
